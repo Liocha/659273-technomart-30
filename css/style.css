@@ -131,7 +131,7 @@ ul {
   font: inherit;
   color: var(--basic-white);
   background-color: var(--basic-red);
-  padding: 11px 46px 9px;
+  padding: 11px 33px 9px 46px;
 }
 
 .button_trans-white {
@@ -545,9 +545,11 @@ ul {
   width: 100%;
   height: 100%;
   background-size: cover;
+  padding: 20px 25px;
+  box-sizing: border-box;
 }
 
-.slider__item h3{
+.slider__item h3 {
   text-transform: uppercase;
   color: var(--basic-white);
   font-weight: 700;
@@ -558,15 +560,27 @@ ul {
 .slider__item p {
   color: var(--basic-white);
   font-size: 18px;
+  margin-top: 8px;
+  margin-bottom: 122px;
+}
+
+.slider__item a {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  padding: 12px 46px 10px 46px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 
 .slider__item_first {
-  background-image: url(../img/slider_1.jpg);
+  display: none;
+  background-image: url(../img/slider_2.jpg);
+
 }
 
 .slider__item_second {
-  display: none;
-  background-image: url(../img/slider_2.jpg);
+  background-image: url(../img/slider_1.jpg);
 }
 
 /* popular-goods section */
@@ -596,12 +610,13 @@ ul {
 
 .popular-goods__header a{
   display: block;
-  padding: 11px 14px 9px 24px;
+  padding: 12px 21px 10px 27px;
   font-size: 14px;
   background-color: var(--basic-red);
   color: var(--basic-white);
   line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .popular-goods__list {
@@ -619,19 +634,61 @@ ul {
   width: 220px;
   height: 318px;
   border: 1px solid #EAEAEA;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .product-item__header {
   color: var(--basic-black);
+  font-family: "PT Sans";
   size: 18px;
+  line-height: 20px;
   font-weight: 700;
+  margin-bottom: 0px;
 }
 
-.product-item__cost span{
+.product-item__wrap-img {
+  height: 140px;
+}
+
+.product-item__cost {
+  text-align: center;
+  margin: 0px;
+}
+
+.product-item__cost span {
   text-decoration: line-through;
+  display: block;
   font-size: 20px;
   font-weight: 700px;
+  margin-top: 6px;
 }
+
+.product-item__cost a {
+  position: relative;
+  display: block;
+  width: 125px;
+  height: 40px;
+  margin: 10px auto 0px auto;
+  background-color: var(--basic-red);
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 17px;
+  color: var(--basic-white);
+  line-height: 18px;
+  font-weight: 700;
+  font-family: "PT Sans";
+}
+
+.product-item__cost a::after {
+  content: '';
+  position: absolute;
+  border: 20px solid transparent;
+  border-left: 15px solid var(--basic-red);
+  left: 125px;
+  bottom: 0px;
+}
+
 
 /* popular-manufacturers section */
 
@@ -646,7 +703,7 @@ ul {
   height: 89px;
   background-color:var(--pale-yellow);
   padding-left: 28px;
-  padding-right: 14px;
+  padding-right: 20px;
 }
 
 .popular-manufacturers__header h2{
@@ -659,13 +716,16 @@ ul {
 }
 
 .popular-manufacturers__header a{
+  width: 192px;
   display: block;
-  padding: 11px 14px 9px 24px;
+  text-align: center;
   font-size: 14px;
   background-color: var(--basic-red);
   color: var(--basic-white);
   line-height: 18px;
   text-transform: uppercase;
+  padding-top: 11px;
+  padding-bottom: 9px;
 }
 
 .popular-manufacturers__list{
@@ -676,6 +736,15 @@ ul {
   list-style: none;
   margin: 20px 0px 0px 0px;
   padding: 0px;
+}
+
+.popular-manufacturers__item {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 145px;
+  align-items: center;
+  border: 1px solid #EAEAEA;
 }
 
 /* services section */

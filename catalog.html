@@ -55,7 +55,7 @@
     </nav>
   </header>
   <main class="">
-    <div class="page-catalog container">
+    <div class="container">
       <ul class="breadcrumbs">
         <li>
           <a href="index.html"><svg width="16" height="20" viewBox="0 0 14 12" fill="none"
@@ -77,58 +77,77 @@
           <a href="#">Перфораторы</a>
         </li>
       </ul>
-      <h1 class="page-title">Перфораторы</h1>
+      <section class="catalog-header">
+        <h1 class="catalog-header__title">Перфораторы</h1>
+      </section>
+    </div>
+    <div class="page-catalog container">
       <section class="filters">
         <h2>Фильтр:</h2>
         <form class="filter" action="/" method="get">
-          <fieldset>
+          <fieldset class="filter-price">
             <legend>Цена:</legend>
-            <input type="text" name="min">
-            <input type="text" name="max">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 30%; margin-left: 20%"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="left: 20%"></div>
+                <div class="toggle toggle-max" tabindex="0" style="left: 50%"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  <input type="text" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  <input type="text" name="max-price" value="30000">
+                </label>
+              </div>
+            </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-maker">
             <legend>Производители:</legend>
             <ul>
-              <li>
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="bosh" id="filter-bosh">
-                <label for="filter-bosh">BOSH</label>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosh" id="filter-bosh">
+                <label for="filter-bosh">BOSCH</label>
               </li>
-              <li>
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="interskol"
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interskol"
                   id="filter-interskol">
                 <label for="filter-interskol">Интерскол</label>
               </li>
-              <li>
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="makita" id="filter-makita"
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita" id="filter-makita"
                   checked>
                 <label for="filter-makita">Makita</label>
               </li>
-              <li>
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="filter-dewalt">
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="filter-dewalt">
                 <label for="filter-dewalt">DeWalt</label>
               </li>
-              <li>
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="filter-hitachi">
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="filter-hitachi">
                 <label for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-powered">
             <legend>Питание:</legend>
             <ul>
-              <li>
-                <input class="filter-input-radio filter-input" type="radio" name="supply" id="filter-accum"
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="supply" id="filter-accum"
                   value="filter-accum">
                 <label for="filter-accum">Аккумуляторные</label>
               </li>
-              <li>
-                <input class="filter-input-radio filter-input" type="radio" name="supply" id="filter-network"
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="supply" id="filter-network"
                   value="filter-network">
-                <label for="filter-accum">Сетевые</label>
+                <label for="filter-network">Сетевые</label>
               </li>
             </ul>
           </fieldset>
-          <button class="button" type="submit">Показать</button>
+          <button class="filter-submit" type="submit">Показать</button>
         </form>
       </section>
       <section class="sorting">

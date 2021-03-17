@@ -20,6 +20,9 @@
         <a class="header-menu__logo" href="#"><img src="img/logo.png" alt="Логотип техномаркет"></a>
         <form action="/" method="get" class="header-menu__search">
           <input type="text" placeholder="Поиск:">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="#C5C5C5"/>
+          </svg>
         </form>
         <a href="#" class="header-menu__bookmark">Закладки: 0</a>
         <a href="#" class="header-menu__cart">Корзина: 0</a>
@@ -34,7 +37,11 @@
         <span> г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
       </p>
       <div class="header-info__user-navigation">
-        <a class="login-button" href="#">Войти</a>
+        <a class="login-button" href="#"><svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
+          <path d="M16.177 15.01H11.3894V17H16.177C18.2513 17 19.038 15.19 19.0618 13.974V3.028C19.038 1.811 18.2513 0 16.177 0H11.3894V1.99H16.177C16.9761 1.99 17.1218 2.671 17.1389 3.047V13.951C17.1227 14.327 16.9761 15.01 16.177 15.01Z" fill="#C5C5C5"/>
+          </svg>
+           Войти</a>
         <a class="registration-button" href="#">Регистрация</a>
       </div>
     </div>
@@ -54,34 +61,25 @@
     <section class="offers container">
       <h2 class="visually-hidden">Предложения</h2>
       <ul class="offers__list">
-        <li class="offes__item offes__item_yellow add-new-label">
+        <li class="offes__item offes__item_yellow">
             <h3>Материалы</h3>
             <a href="#">На любой вкус</a>
-            <div class="img-wrap">
-              <img src="img/icons/icon_materials.svg" alt="Иконка Материалы">
-            </div>
         </li>
         <li class="offes__item offes__item_blue">
             <h3>Инструмент</h3>
             <a href="#">На все случаи</a>
-            <div class="img-wrap">
-              <img src="img/icons/icon_instrument.svg"  alt="Иконка Инструмент">
-            </div>
         </li>
         <li class="offes__item offes__item_purple">
             <h3>Техника</h3>
             <a href="#">Для стройки</a>
-            <div class="img-wrap"><img src="img/icons/icon_technics.svg" alt="Иконка Техника"></div>
         </li>
         <li class="offes__item offes__item_green">
             <h3>Скидки 50%</h3>
             <a href="#">На все товары</a>
-            <div class="img-wrap"><img src="img/icons/icon_service_discounts.svg" alt="Иконка Скидки"></div>
         </li>
-        <li class="offes__item offes__item_yellow">
+        <li class="offes__item offes__item_yellow-white">
             <h3>Доставка</h3>
             <a href="#">Бесплатно</a>
-            <div class="img-wrap"><img src="img/icons/icon_service_delivery.svg"  alt="Иконка Доставка "></div>
         </li>
         <li class="slider">
           <dir class="slider_arrows">
@@ -125,7 +123,7 @@
               <span class="product-item-title">Перфоратор BOSCH BFG 3000</span>
             </h3>
             <p class="product-item__image">
-              <img src="img/prod_perforator_3.jpg" width="178px" height="128px" alt="Перфоратор BOSCH BFG 3000">
+              <img src="img/prod_perforator_3.jpg" width="144px" height="128px" alt="Перфоратор BOSCH BFG 3000">
             </p>
           </a>
           <p class="product-item__cost">
@@ -133,13 +131,13 @@
             <a href="#" class="">25500 Р.</a>
           </p>
         </li>
-        <li class="product-item add-new-label">
+        <li class="product-item">
           <a href="#">
             <h3>
               <span class="product-item-title">Перфоратор BOSCH BFG 9000</span>
             </h3>
-            <p class="product-item__image">
-              <img src="img/prod_perforator_1.jpg" width="178px" height="128px" alt="Перфоратор BOSCH BFG 9000">
+            <p class="">
+              <img src="img/prod_perforator_1.jpg" width="144px" height="128px" alt="Перфоратор BOSCH BFG 9000">
             </p>
           </a>
           <p class="product-item__cost">
@@ -153,7 +151,7 @@
               <span class="product-item-title">Перфоратор BOSCH BFG 3000</span>
             </h3>
             <p class="product-item__image">
-              <img src="img/prod_perforator_2.jpg" width="178px" height="165" alt="Перфоратор BOSCH BFG 6000">
+              <img src="img/prod_perforator_2.jpg" width="144px" height="128px" alt="Перфоратор BOSCH BFG 6000">
             </p>
           </a>
           <p class="product-item__cost">
@@ -161,13 +159,13 @@
             <a href="#" class="">25500 Р.</a>
           </p>
         </li>
-        <li class="product-item add-new-label">
+        <li class="product-item">
           <a href="#">
             <h3>
               <span class="product-item-title">Перфоратор BOSCH BFG 2000</span>
             </h3>
             <p class="product-item__image">
-              <img src="img/prod_perforator_1.jpg" width="178px" height="165" alt="Перфоратор BOSCH BFG 2000">
+              <img src="img/prod_perforator_1.jpg" width="144px" height="128px" alt="Перфоратор BOSCH BFG 2000">
             </p>
           </a>
           <p class="product-item__cost">
@@ -183,21 +181,30 @@
         <a href="#" >Все прозводители</a>
       </div>
       <ul class="popular-manufacturers__list">
-        <li class="popular-manufacturers__item"><img src="img/logos/logo_bosch.png" width="auto"  alt="логотип bosh"></li>
-        <li class="popular-manufacturers__item"><img src="img/logos/logo_makita.png" width="auto"
-            alt="логотип makita"></li>
-        <li class="popular-manufacturers__item"><img src="img/logos/logo_dewalt.png" width="auto"
-            alt="логотип dewalt"></li>
-        <li class="popular-manufacturers__item"><img src="img/logos/logo_interskol.png" width="auto"
-            alt="логотип интерскол"></li>
-        <li class="popular-manufacturers__item"><img src="img/logos/logo_hitachi.png" width="auto"
-            alt="логотип hitachi"></li>
-        <li class="popular-manufacturers__item"><img src="img/logos/logo_lg.png" width="auto"
-            alt="логотип lg"></li>
-        <li class="popular-manufacturers__item"><img src="img/logos/logo_aeg.png" width="auto"
-            alt="логотип aeg"></li>
-        <li class="popular-manufacturers__item"><img src="img/logos/logo_metabo.png" width="auto"
-            alt="логотип metabo"></li>
+        <li class="popular-manufacturers__item">
+          <a href="#"><img src="img/logos/logo_bosch.png" width="auto"  alt="логотип bosh"></a>
+        </li>
+        <li class="popular-manufacturers__item">
+          <a href="#"><img src="img/logos/logo_makita.png" width="auto" alt="логотип makita"></a>
+        </li>
+        <li class="popular-manufacturers__item">
+          <a href="#"><img src="img/logos/logo_dewalt.png" width="auto" alt="логотип dewalt"></a>
+        </li>
+        <li class="popular-manufacturers__item">
+          <a href="#"><img src="img/logos/logo_interskol.png" width="auto" alt="логотип интерскол"></a>
+        </li>
+        <li class="popular-manufacturers__item">
+          <a href="#"><img src="img/logos/logo_hitachi.png" width="auto" alt="логотип hitachi"></a>
+        </li>
+        <li class="popular-manufacturers__item">
+          <a href="#"><img src="img/logos/logo_lg.png" width="auto" alt="логотип lg"></a>
+        </li>
+        <li class="popular-manufacturers__item">
+          <a href="#"><img src="img/logos/logo_aeg.png" width="auto" alt="логотип aeg"></a>
+        </li>
+        <li class="popular-manufacturers__item">
+          <a href="#"><img src="img/logos/logo_metabo.png" width="auto" alt="логотип metabo"></a>
+        </li>
       </ul>
     </section>
     <section class="services">
@@ -209,13 +216,13 @@
         <div class="service-wrapper">
           <ul class="services__list-name">
             <li>
-              Доставка
+              <a href="#">Доставка</a>
             </li>
             <li>
-              Гарантия
+              <a href="#">Гарантия</a>
             </li>
             <li>
-              Кредит
+              <a href="#">Кредит</a>
             </li>
           </ul>
           <ul class="services__list">

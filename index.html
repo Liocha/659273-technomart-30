@@ -288,7 +288,7 @@
           заехав в наш офис:
         </p>
         <img class="map" src="img/map_small.png" alt="карта с меткой магазина">
-        <a class="">Заблудились? Напишите нам!</a>
+        <a href="#">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
@@ -368,6 +368,30 @@
       </div>
     </div>
   </footer>
+  <section class="modal modal-contact-form">
+    <h2 class="visually-hidden">Контактная форма</h2>
+    <form class="contact-form" action="https://echo.htmlacademy.ru" method="post" id="contact-form">
+        <div class="input-wrap">
+          <label class="" for="contact-name">Ваше имя:</label>
+          <input class="contact-name" id="contact-name" type="text" name="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="input-wrap">
+          <label class="" for="contact-email">Ваш e-mail:</label>
+          <input class="contact-email" id="contact-email" type="email" name="email" placeholder="email@example.com">
+        </div>
+      <p class="contact-message">
+        <label for="contact-message">Текст письма:</label>
+        <textarea name="contact-message" id="contact-message" cols="62" rows="5" placeholder="В свободной форме:"></textarea>
+      </p>
+    </form>
+    <button class="button-submit" type="submit" form="contact-form">Отправить</button>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="943" height="449" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
+  <script src="./js/main.min.js" ></script>
 </body>
-
 </html>

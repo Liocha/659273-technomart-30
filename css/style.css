@@ -67,6 +67,7 @@
   --pale-gray: #C5C5C5;
   --basic-greylight: rgb(197, 197, 197, 0.3);
   --dark-grey: rgb(169, 169, 169, 0.3);
+  --lite-gray: #F4F4F4;
 }
 
 /* Global */
@@ -784,6 +785,12 @@ ul {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.product-item .btn-wrap {
+  position: absolute;
+  position: absolute;
+}
+
+
 .product-item a {
   display: flex;
   flex-direction: column;
@@ -808,6 +815,11 @@ ul {
   height: 140px;
   margin: 0;
   object-fit: contain;
+  position: relative;
+}
+
+.product-item__image img {
+
 }
 
 .product-item__cost {
@@ -1123,6 +1135,10 @@ margin-top: 33px;
  font-family: "Cuprum";
 }
 
+.contacts img {
+  cursor: pointer;
+}
+
 .contacts a {
  text-transform: uppercase;
  display: block;
@@ -1134,6 +1150,7 @@ margin-top: 33px;
  font-family: "Cuprum";
  text-transform: uppercase;
  color: var(--basic-white);
+ cursor: pointer;
 }
 
 .map {
@@ -1933,4 +1950,222 @@ p.footer-developer {
 
 .sorting-ascending:hover {
   border-bottom-color: var(--basic-black);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.modal-contact-form {
+  display: none;
+  top: 120px;
+  bottom: auto;
+  width: 620px;
+  height: 430px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75));
+  border-top: 7px solid var(--basic-red);
+  background-color: var(--lite-gray);
+}
+
+.contact-form {
+  background-color: var(--basic-white);
+  box-sizing: border-box;
+  padding-top: 39px;
+  padding-left: 80px;
+  padding-right: 80px;
+  height: 311px;
+}
+
+.input-wrap {
+  width: 220px;
+  display: inline-block;
+}
+
+.input-wrap:first-child {
+  margin-right: 16px;
+}
+
+.modal-contact-form label {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  display: block;
+}
+
+.modal-contact-form input[type="text"],
+.modal-contact-form input[type="email"] {
+  box-sizing: border-box;
+  width: 220px;
+  margin-top: 11px;
+  padding-top: 5px;
+  padding-right: 7px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  font: inherit;
+  color: var(--basic-black);
+  border: 2px solid var(--pale-gray);
+  border-radius: 2px;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans";
+  font-weight: 400;
+}
+
+.contact-message {
+  width: 460px;
+  margin-top: 14px;
+}
+
+.contact-message textarea {
+  resize: none;
+  border: 2px solid var(--pale-gray);
+  border-radius: 2px;
+  margin-top: 11px;
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 12px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.button-submit {
+  width: 460px;
+  background-color: var(--basic-red);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: none;
+  color: var(--basic-white);
+  height: 38px;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 37px;
+}
+
+.contact-footer {
+
+  height: 112px;
+  width: 100%;
+  text-align: center;
+  padding-top: 37px;
+  box-sizing: border-box;
+}
+
+.modal-close {
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 25px;
+  height: 4px;
+  background: var(--basic-red);
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-contact-form button:active,
+.modal-contact-form button:focus {
+  outline: none;
+}
+
+.modal-map {
+  display: none;
+  width: 943px;
+  height: 449px;
+  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75));
+  border-top: 7px solid var(--basic-red);
+}
+
+.modal-map button:active,
+.modal-map button:focus {
+  outline: none;
+}
+
+.modal-map img {
+  display: block;
+}
+
+.modal-map iframe {
+  border: none;
+}
+
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

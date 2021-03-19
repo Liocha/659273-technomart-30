@@ -749,8 +749,9 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   bottom: 35px;
-  width: 100%;
+  width: 30px;
   gap: 10px;
+  margin-left: calc(50% - 15px);
 }
 
 .slider_dots li {
@@ -863,6 +864,15 @@ ul {
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.popular-goods__header a:hover {
+  background-color: var(--dirty-red);
+}
+
+.popular-goods__header a:active,
+.popular-goods__header a:focus{
+  background-color: var(--dark-red);
 }
 
 .popular-goods__list {
@@ -1161,6 +1171,15 @@ p.product-item__cost {
   padding-bottom: 9px;
 }
 
+.popular-manufacturers__header a:hover {
+  background-color: var(--dirty-red);
+}
+
+.popular-manufacturers__header a:active,
+.popular-manufacturers__header a:focus{
+  background-color: var(--dark-red);
+}
+
 .popular-manufacturers__list{
   display: -ms-grid;
   display: grid;
@@ -1436,6 +1455,15 @@ margin-top: 33px;
           box-sizing: border-box;
 }
 
+.about-company a:hover {
+  background-color: var(--dirty-red);
+}
+
+.about-company a:active,
+.about-company a:focus{
+  background-color: var(--dark-red);
+}
+
 /* contacts section */
 
 .contacts h3 {
@@ -1462,6 +1490,15 @@ margin-top: 33px;
  text-transform: uppercase;
  color: var(--basic-white);
  cursor: pointer;
+}
+
+.contacts a:hover {
+  background-color: var(--dirty-red);
+}
+
+.contacts a:active,
+.contacts a:focus{
+  background-color: var(--dark-red);
 }
 
 .map {

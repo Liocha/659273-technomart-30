@@ -68,6 +68,8 @@
   --basic-greylight: rgb(197, 197, 197, 0.3);
   --dark-grey: rgb(169, 169, 169, 0.3);
   --lite-gray: #F4F4F4;
+  --dakr-green: #367315;
+  --dirty-green: #518534;
 }
 
 /* Global */
@@ -773,6 +775,7 @@ ul {
   display: inline-block;
   padding-top: 5px;
   box-sizing: border-box;
+  z-index: 5;
 }
 
 
@@ -785,13 +788,26 @@ ul {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.product-item:hover img {
+  display: none;
+}
+
+.product-item .product-item__image-hover {
+  top:18px
+}
+
+.product-item:hover .product-item__image-hover {
+  display: block;
+}
+
 .product-item .btn-wrap {
-  position: absolute;
   position: absolute;
 }
 
 
-.product-item a {
+
+
+.product-item > div {
   display: flex;
   flex-direction: column;
   color: var(--basic-black);
@@ -800,6 +816,11 @@ ul {
 .product-item h3 {
   order: 1;
   margin: 0px;
+  color: var(--basic-black);
+  font-family: "PT Sans";
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
 }
 
 .product-item-title {
@@ -812,13 +833,78 @@ ul {
 
 .product-item__image {
   width: 180px;
-  height: 140px;
+  height: 159px;
   margin: 0;
   object-fit: contain;
   position: relative;
 }
 
-.product-item__image img {
+
+.product-item__image-hover {
+  position: absolute;
+  display: none;
+}
+
+.product-item__image-hover button {
+  width: 135px;
+  height: 38px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  font-family: "Cuprum";
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-buy_green {
+  background: var(--basic-green);
+  box-shadow: inset 0px -3px 0px var(--dakr-green);
+  border-radius: 2px;
+  color: var(--basic-white);
+  border: none;
+  position: relative;
+  padding-left: 15px;
+}
+
+.btn-buy_green::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/icons/icon_cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 9px;
+  left: 27px;
+  opacity: 0.3;
+}
+
+.btn-buy_green:hover {
+  background:var(--green-success);
+}
+
+.btn-buy_green:active {
+  background:var(--dirty-green);
+}
+
+.btn-to-bookmarks {
+  margin-top: 10px;
+  background-color: var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 2px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: 3px solid var(--basic-green);
+  color: var(--dirty-blue);
+
+}
+
+.btn-to-bookmarks:hover {
+  border-color: var(--dirty-blue);
+}
+
+.btn-to-bookmarks:active {
+  opacity: 0.5;
 
 }
 
@@ -1428,6 +1514,7 @@ p.footer-developer {
   margin: 0px;
   padding: 10px 18px;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
  fieldset {
@@ -1654,8 +1741,9 @@ p.footer-developer {
   height: 38px;
   display: flex;
   justify-content: space-between;
-  padding-top: 8px;
+  padding-top: 9px;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 .sorting h2{
@@ -1674,7 +1762,7 @@ p.footer-developer {
   display: grid;
 }
 
-.sorting li span{
+.sorting a {
   text-transform: uppercase;
   font-size: 13px;
   font-family: "PT Sans";
@@ -1690,7 +1778,7 @@ p.footer-developer {
   align-items: center;
 }
 
-.sorting li:hover span{
+.sorting a:hover{
   cursor: pointer;
   border-bottom: none;
   color: var(--basic-black);
@@ -1698,8 +1786,10 @@ p.footer-developer {
   border-bottom: 1px solid var(--basic-red);
 }
 
-.sorting li svg {
-  cursor: pointer;
+.sorting a:active,
+.sorting a:focus{
+  color: var(--basic-red);
+  border-bottom: none;
 }
 
 .product-list {
@@ -1746,6 +1836,7 @@ p.footer-developer {
   display: inline-block;
   padding-top: 5px;
   box-sizing: border-box;
+  z-index: 5;
 }
 
 /* Pagination */
@@ -1921,7 +2012,8 @@ p.footer-developer {
 }
 
 
-.sorting-ascending {
+ .sorting a.sorting-ascending{
+  display: block;
   border: 5px solid transparent;
   border-bottom: 10px solid var(--pale-gray);
   display: block;
@@ -1933,7 +2025,7 @@ p.footer-developer {
   cursor: pointer;
 }
 
-.sorting-descending {
+.sorting a.sorting-descending {
   position: relative;
   top: 2px;
   border: 5px solid transparent;
@@ -1944,12 +2036,22 @@ p.footer-developer {
   cursor: pointer;
 }
 
-.sorting-descending:hover {
+a.sorting-descending:hover {
   border-top-color: var(--basic-black);
 }
 
-.sorting-ascending:hover {
+a.sorting-descending:active,
+a.sorting-descending:focus {
+  border-top-color: var(--basic-red);
+}
+
+a.sorting-ascending:hover {
   border-bottom-color: var(--basic-black);
+}
+
+a.sorting-ascending:active,
+a.sorting-ascending:focus {
+  border-bottom-color: var(--basic-red);
 }
 
 .modal {
@@ -2126,6 +2228,103 @@ p.footer-developer {
 
 .modal-error {
   animation: shake 0.6s;
+}
+
+.button-checkout,
+.button-continue-shopping {
+  width: 192px;
+  height: 38px;
+  outline: none;
+  border: none;
+  font-family: "Cuprum";
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 35px;
+  padding: 0px;
+}
+
+.button-checkout {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  margin-left: 114px;
+}
+
+.button-continue-shopping {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  margin-left: 4px;
+}
+
+.modal-add-to-cart {
+  display: none;
+  top: 120px;
+  bottom: auto;
+  width: 620px;
+  height: 282px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75));
+  border-top: 7px solid var(--basic-red);
+  background-color: var(--lite-gray);
+}
+
+.modal-add-to-cart div{
+  position: relative;
+  height: 165px;
+  width: 100%;
+  background: var(--basic-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-add-to-cart h2 {
+  margin: 0px;
+  font-family: "Cuprum";
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+div.check-mark {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  background: var(--basic-green);
+  border-radius: 50%;
+  left: 80px;
+  top: 46px;
+}
+
+
+div.check-mark::before {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 16px;
+  width: 20px;
+  height: 7px;
+  background: var(--basic-white);
+}
+
+
+div.check-mark::after {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 27px;
+  width: 30px;
+  height: 7px;
+  background: var(--basic-white);
+}
+
+div.check-mark::before {
+  transform: rotate(45deg);
+}
+
+div.check-mark::after {
+  transform: rotate(-45deg);
 }
 
 /* Animations */

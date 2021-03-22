@@ -2152,6 +2152,11 @@ p.footer-developer {
   border-radius: 2px;
 }
 
+.filter-input-radio:focus + label,
+.filter-input-checkbox:focus + label {
+  outline: auto;
+}
+
 .filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;

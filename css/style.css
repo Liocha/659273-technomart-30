@@ -1900,6 +1900,7 @@ p.footer-developer {
 
 .breadcrumbs {
   list-style: none;
+  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

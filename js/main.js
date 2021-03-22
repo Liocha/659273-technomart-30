@@ -9,7 +9,7 @@ const linkMap = document.querySelector(".contacts img");
 const modalMap = document.querySelector(".modal-map");
 const modalMapClose = modalMap.querySelector(".modal-close");
 
-linkMap.addEventListener('click', function(e) {
+linkMap.addEventListener("click", function(e) {
   e.preventDefault();
   modalMap.classList.add("modal-show");
 });
@@ -19,7 +19,7 @@ modalMapClose.addEventListener("click", function (e) {
   modalMap.classList.remove("modal-show");
 });
 
-linkContact.addEventListener('click', function(e) {
+linkContact.addEventListener("click", function(e) {
   e.preventDefault();
   contactForm.classList.add("modal-show");
   contactName.focus();

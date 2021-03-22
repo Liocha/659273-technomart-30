@@ -425,6 +425,7 @@ ul {
   padding: 4px 42px 5px 71px;
   text-align: left;
   margin-bottom: 3px;
+  vertical-align: baseline;
 }
 
 .header-info__contact a::before {
@@ -668,7 +669,6 @@ ul {
   font-weight: 400;
   color: var(--basic-white);
   text-transform: uppercase;
-  display: inline-block;
   padding-top: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -928,7 +928,6 @@ ul {
   font-weight: 400;
   color: var(--basic-white);
   text-transform: uppercase;
-  display: inline-block;
   padding-top: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2320,7 +2319,6 @@ p.footer-developer {
   font-weight: 400;
   color: var(--basic-white);
   text-transform: uppercase;
-  display: inline-block;
   padding-top: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2437,6 +2435,7 @@ p.footer-developer {
   position: relative;
   cursor: pointer;
   color: var(--basic-black);
+  vertical-align: bottom;
 }
 
 .user-name span {
@@ -2588,6 +2587,7 @@ a.sorting-ascending:focus {
 .input-wrap {
   width: 220px;
   display: inline-block;
+  vertical-align: bottom;
 }
 
 .input-wrap:first-child {

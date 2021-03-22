@@ -1023,6 +1023,22 @@ ul {
   outline: none;
 }
 
+.btn {
+  padding-top: 10px;
+  display: block;
+  width: 135px;
+  height: 38px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  font-family: "Cuprum";
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
 .btn-buy_green {
   background: var(--basic-green);
   -webkit-box-shadow: inset 0px -3px 0px var(--dakr-green);
@@ -1057,6 +1073,7 @@ ul {
 
 .btn-to-bookmarks {
   margin-top: 10px;
+  padding-top: 7px;
   background-color: var(--basic-white);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
